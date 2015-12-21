@@ -23,14 +23,7 @@ import android.util.Log;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
-import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesGetActivePlayerName;
-import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesGetLeaderboardFunction;
-import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesReportAchievementFunction;
-import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesReportScoreFunction;
-import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesShowAchievementsFunction;
-import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesSignInFunction;
-import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesSignOutFunction;
-import com.freshplanet.googleplaygames.functions.AirGooglePlayStartAtLaunch;
+import com.freshplanet.googleplaygames.functions.*;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
 import com.google.android.gms.games.Player;
@@ -70,6 +63,7 @@ public class ExtensionContext extends FREContext implements GameHelper.GameHelpe
 		functionMap.put("showStandardAchievements", new AirGooglePlayGamesShowAchievementsFunction());
 		functionMap.put("getActivePlayerName", new AirGooglePlayGamesGetActivePlayerName());
         functionMap.put("getLeaderboard", new AirGooglePlayGamesGetLeaderboardFunction());
+		functionMap.put("getAuthToken", new AirGooglePlayGamesGetAuthTokenFunction());
 		return functionMap;
 	}
 	

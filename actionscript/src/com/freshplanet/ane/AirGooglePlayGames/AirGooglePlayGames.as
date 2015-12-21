@@ -126,8 +126,17 @@ package com.freshplanet.ane.AirGooglePlayGames
 			if (AirGooglePlayGames.isSupported)
 				_context.call("getLeaderboard", leaderboardId );
 		}
-		
-		
+
+		public function getAuthToken(leaderboardId:String, newScore:Number):String
+		{
+			var token:String;
+			if (AirGooglePlayGames.isSupported)
+			{
+				token = _context.call("getAuthToken", "account", "clientId") as String;
+			}
+			return token;
+		}
+
 		// --------------------------------------------------------------------------------------//
 		//																						 //
 		// 									 	PRIVATE API										 //
